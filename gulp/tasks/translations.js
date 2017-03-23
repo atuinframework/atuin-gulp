@@ -6,8 +6,6 @@ var gulp = require('gulp-help')(require('gulp')),
 	del = require('del');
 
 
-
-
 gulp.task(	'translations:init',
 			false,
 			function() {
@@ -34,7 +32,6 @@ gulp.task(	'translations:extract',
 						}]));
 			}
 );
-
 
 gulp.task(	'translations:update',
 			false,

@@ -19,6 +19,12 @@ localization, caching. Look at the repository for more details. :)
 
 Atuin free to use for all.
 
+### ENV variables
+
+Be sure to export as environment variables the followings:
+
+- `CONFIG_FOLDER` -configuration folder path- to let gulp, bable and others know where project configuration files are placed.
+
 ## And this container?
 
 In modern days we use lots of different tools to build assets, compile js, minification
