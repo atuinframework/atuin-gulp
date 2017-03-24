@@ -17,11 +17,3 @@ gulp.task(	'monitor',
 				$.sequence(['css', 'css_admin', 'js', 'js_admin', 'img'], 'watch')();
 			}
 );
-
-gulp.task(	'deploy',
-			'Deploy on gae.',
-			function() {
-				$.util.env.type = 'production';
-				return $.sequence(['css', 'css_admin', 'js', 'js_admin', 'img'], 'deploy:update')();
-			}
-);

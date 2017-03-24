@@ -3,6 +3,7 @@ MAINTAINER Paolo Casciello <paolo.casciello@scalebox.it>
 
 RUN apk add --no-cache py-pip && \
     pip install --upgrade pip && \
+    pip install Babel && \
     yarn cache clean && \
     rm -rf /var/cache/* /tmp/*
 
@@ -13,5 +14,3 @@ COPY ./package.json /workspace/
 ENV NODE_ENV development
 
 RUN npm update
-
-CMD ["gulp", "monitor"]

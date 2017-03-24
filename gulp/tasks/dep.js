@@ -4,7 +4,7 @@ var gulp = require('gulp-help')(require('gulp')),
 	$ = require('gulp-load-plugins')(),
 	config = require('../config'),
 	del = require('del'),
-	config_folder = (process.env.CONFIG_FOLDER) ? (process.env.CONFIG_FOLDER + '/') : '';
+	env_config_folder = (process.env.CONFIG_FOLDER) ? (process.env.CONFIG_FOLDER + '/') : '';
 
 gulp.task(	'update:pipinstall',
 			false,
@@ -12,7 +12,7 @@ gulp.task(	'update:pipinstall',
 				return gulp.src('gulpfile.js')
 						.pipe($.start( [{
 							match: /gulpfile.js$/,
-							cmd: 'pip install -U -r ' + config_folder + 'requirements.txt -t ' + config.lib
+							cmd: 'pip install -U -r ' + env_config_folder + 'requirements.txt -t ' + config.lib
 						}]));
 			}
 );
